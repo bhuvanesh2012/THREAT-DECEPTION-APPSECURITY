@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="seal"></div>
+    <div class="brand">
+      <div class="brand-mark">Meridian Corp</div>
+      <div class="brand-sub">Internal Admin Portal</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Administrator sign in</div>
+      <div class="card-desc">Restricted access. Authorized personnel only.</div>
+      <form method="POST">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" name="username" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+      {% if message %}<div class="message">{{ message }}</div>{% endif %}
+    </div>
+  </div>
+</body>
+</html>
