@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vaultline — Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="seal"></div>
+    <div class="brand">
+      <div class="brand-mark">Vaultline</div>
+      <div class="brand-sub">Secure Access System</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Create account</div>
+      <div class="card-desc">Your password is hashed before storage. We never see or save it in plain form.</div>
+      <form method="POST">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" name="username" required autocomplete="off">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password" name="password" required>
+        </div>
+        <button class="btn" type="submit">Create account</button>
+      </form>
+      {% if message %}<div class="message">{{ message }}</div>{% endif %}
+      <div class="foot-link">Already have an account? <a href="{{ url_for('login') }}">Sign in</a></div>
+    </div>
+  </div>
+</body>
+</html>
