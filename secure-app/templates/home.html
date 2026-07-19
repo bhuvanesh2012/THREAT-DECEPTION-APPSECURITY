@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vaultline</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="seal"></div>
+    <div class="brand">
+      <div class="brand-mark">Vaultline</div>
+      <div class="brand-sub">Secure Access System</div>
+    </div>
+    <div class="card dash">
+      <div class="dash-welcome">Welcome</div>
+      <div class="dash-sub">A reference implementation of secure authentication.</div>
+      <div class="foot-link">
+        <a href="{{ url_for('register') }}">Create account</a> &nbsp;·&nbsp; <a href="{{ url_for('login') }}">Sign in</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
