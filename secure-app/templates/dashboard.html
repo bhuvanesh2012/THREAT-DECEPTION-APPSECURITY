@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vaultline — Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrap">
+    <div class="seal"></div>
+    <div class="brand">
+      <div class="brand-mark">Vaultline</div>
+      <div class="brand-sub">Secure Access System</div>
+    </div>
+    <div class="card dash">
+      <div class="dash-welcome">Welcome, {{ username }}</div>
+      <div class="dash-sub">Your session is authenticated and active.</div>
+      <div class="status-row"><span>Authentication</span><span>Verified</span></div>
+      <div class="status-row"><span>Password storage</span><span>Bcrypt hash</span></div>
+      <div class="status-row"><span>Session</span><span>Active</span></div>
+      <div class="foot-link"><a href="{{ url_for('logout') }}">Sign out</a></div>
+    </div>
+  </div>
+</body>
+</html>
